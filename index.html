@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>sathomas.me - User Experience &amp; Usability</title>
+
+<!--
+HTML/CSS Template complements of Thomas Hardy
+http://www.thomashardy.me.uk/free-responsive-html-css3-cv-template
+-->
+
+<meta name="viewport" content="width=device-width"/>
+<meta name="description" content="sathomas.me home page"/>
+<meta charset="UTF-8"> 
+
+<link type="text/css" rel="stylesheet" href="style.css">
+<link href='http://fonts.googleapis.com/css?family=Rokkitt:400,700|Lato:400,300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="font-awesome.css">
+
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+</head>
+
+<body>
+	
+<div id="bg">
+	<img src="Typing.jpg" alt="">
+</div>
+
+	<div id="container">
+		<div id="content">
+	<h1>Coming Soon</h1>
+	<p>I'm working as fast as I can. In the meantime, perhaps you'd like to follow me on Twitter?</p>
+</div>
+  <div id="tweets">
+	<script charset="utf-8" src="http://widgets.twimg.com/j/2/widget.js"></script>
+	<script>
+	new TWTR.Widget({
+		version: 2,
+		type: 'profile',
+		rpp: 3,
+		interval: 30000,
+		width: 'auto',
+		height: 300,
+		theme: {
+			shell: {
+				background: '#333333',
+				color: '#ffffff'
+			},
+			tweets: {
+				background: '#000000',
+				color: '#ffffff',
+				links: '#cf8c05'
+			}
+		},
+		features: {
+			scrollbar: true,
+			loop: false,
+			live: true,
+			behavior: 'all'
+		}
+	}).render().setUser('stephen_thomas').start();
+	</script>
+</div>
+</div>
+
+</body>
+	 
+</html>
