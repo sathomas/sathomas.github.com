@@ -2,6 +2,17 @@
   "CodeKitInfo" : "This is a CodeKit project configuration file. It is designed to sync project settings across multiple machines. Modifying the contents of this file can be a poor life decision if you don't know what you're doing. This file is not useful unless accompanied by the project that created it in CodeKit. For more information, see: http:\/\/incident57.com\/codekit",
   "creatorBuild" : "6708",
   "files" : {
+    "\/src\/js\/bootstrap-popover.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 1,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/src\/js\/bootstrap-popover.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/js\/bootstrap-popover.min.js",
+      "fileType" : 5
+    },
     "\/src\/less\/font-awesome-ie7.less" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -23,6 +34,18 @@
       "outputStyle" : 1,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/css\/pager.css",
+      "strictImports" : 0,
+      "fileType" : 0
+    },
+    "\/src\/less\/variables-custom.less" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 1,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/src\/less\/variables-custom.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/css\/variables-custom.css",
       "strictImports" : 0,
       "fileType" : 0
     },
@@ -49,18 +72,6 @@
       "outputAbbreviatedPath" : "\/js\/bootstrap-tab.min.js",
       "fileType" : 5
     },
-    "\/src\/less\/sprites.less" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 1,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/src\/less\/sprites.less",
-      "outputStyle" : 1,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/css\/sprites.css",
-      "strictImports" : 0,
-      "fileType" : 0
-    },
     "\/index.html" : {
       "ignoreWasSetByUser" : 0,
       "ignore" : 0,
@@ -80,6 +91,18 @@
       "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/js\/bootstrap-carousel.min.js",
       "fileType" : 5
+    },
+    "\/src\/less\/sprites.less" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 1,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/src\/less\/sprites.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/css\/sprites.css",
+      "strictImports" : 0,
+      "fileType" : 0
     },
     "\/src\/less\/reset.less" : {
       "ignoreWasSetByUser" : 1,
@@ -129,6 +152,17 @@
       "strictImports" : 0,
       "fileType" : 0
     },
+    "\/img\/apple-touch-icon-114-precomposed.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 1,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/apple-touch-icon-114-precomposed.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/apple-touch-icon-114-precomposed.png",
+      "initialSize" : 21084,
+      "fileType" : 10
+    },
     "\/src\/less\/modals.less" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -164,18 +198,6 @@
       "strictImports" : 0,
       "fileType" : 0
     },
-    "\/src\/less\/buttons.less" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 1,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/src\/less\/buttons.less",
-      "outputStyle" : 1,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/css\/buttons.css",
-      "strictImports" : 0,
-      "fileType" : 0
-    },
     "\/src\/less\/carousel.less" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -188,27 +210,40 @@
       "strictImports" : 0,
       "fileType" : 0
     },
-    "\/src\/js\/bootstrap-modal.js" : {
+    "\/src\/js\/bootstrap-typeahead.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
       "hidden" : 1,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/src\/js\/bootstrap-modal.js",
+      "inputAbbreviatedPath" : "\/src\/js\/bootstrap-typeahead.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/js\/bootstrap-modal.min.js",
+      "outputAbbreviatedPath" : "\/js\/bootstrap-typeahead.min.js",
       "fileType" : 5
     },
-    "\/src\/js\/bootstrap-scrollspy.js" : {
+    "\/src\/less\/grid.less" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
       "hidden" : 1,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/src\/js\/bootstrap-scrollspy.js",
+      "inputAbbreviatedPath" : "\/src\/less\/grid.less",
       "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/js\/bootstrap-scrollspy.min.js",
-      "fileType" : 5
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/css\/grid.css",
+      "strictImports" : 0,
+      "fileType" : 0
+    },
+    "\/src\/less\/progress-bars.less" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 1,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/src\/less\/progress-bars.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/css\/progress-bars.css",
+      "strictImports" : 0,
+      "fileType" : 0
     },
     "\/src\/less\/wells.less" : {
       "ignoreWasSetByUser" : 1,
@@ -293,6 +328,17 @@
       "strictImports" : 0,
       "fileType" : 0
     },
+    "\/src\/js\/bootstrap-scrollspy.js" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 1,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/src\/js\/bootstrap-scrollspy.js",
+      "outputStyle" : 1,
+      "syntaxCheckerStyle" : 0,
+      "outputAbbreviatedPath" : "\/js\/bootstrap-scrollspy.min.js",
+      "fileType" : 5
+    },
     "\/src\/less\/responsive-767px-max.less" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -305,40 +351,27 @@
       "strictImports" : 0,
       "fileType" : 0
     },
-    "\/src\/less\/grid.less" : {
+    "\/src\/js\/bootstrap-modal.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
       "hidden" : 1,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/src\/less\/grid.less",
-      "outputStyle" : 1,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/css\/grid.css",
-      "strictImports" : 0,
-      "fileType" : 0
-    },
-    "\/src\/js\/bootstrap-typeahead.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 1,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/src\/js\/bootstrap-typeahead.js",
+      "inputAbbreviatedPath" : "\/src\/js\/bootstrap-modal.js",
       "outputStyle" : 1,
       "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/js\/bootstrap-typeahead.min.js",
+      "outputAbbreviatedPath" : "\/js\/bootstrap-modal.min.js",
       "fileType" : 5
     },
-    "\/src\/less\/responsive-768px-979px.less" : {
-      "ignoreWasSetByUser" : 1,
+    "\/img\/apple-touch-icon-144-precomposed.png" : {
+      "ignoreWasSetByUser" : 0,
       "ignore" : 1,
       "hidden" : 1,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/src\/less\/responsive-768px-979px.less",
-      "outputStyle" : 1,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/css\/responsive-768px-979px.css",
-      "strictImports" : 0,
-      "fileType" : 0
+      "inputAbbreviatedPath" : "\/img\/apple-touch-icon-144-precomposed.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/apple-touch-icon-144-precomposed.png",
+      "initialSize" : 30979,
+      "fileType" : 10
     },
     "\/src\/less\/navs.less" : {
       "ignoreWasSetByUser" : 1,
@@ -376,6 +409,17 @@
       "strictImports" : 0,
       "fileType" : 0
     },
+    "\/img\/blueprint.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/blueprint.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/blueprint.jpg",
+      "initialSize" : 1534069,
+      "fileType" : 9
+    },
     "\/src\/js\/jquery-1.8.2.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -387,15 +431,15 @@
       "outputAbbreviatedPath" : "\/js\/jquery-1.8.2.min.js",
       "fileType" : 5
     },
-    "\/src\/less\/progress-bars.less" : {
+    "\/src\/less\/responsive-768px-979px.less" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
       "hidden" : 1,
       "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/src\/less\/progress-bars.less",
+      "inputAbbreviatedPath" : "\/src\/less\/responsive-768px-979px.less",
       "outputStyle" : 1,
       "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/css\/progress-bars.css",
+      "outputAbbreviatedPath" : "\/css\/responsive-768px-979px.css",
       "strictImports" : 0,
       "fileType" : 0
     },
@@ -408,6 +452,29 @@
       "outputStyle" : 1,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/css\/pagination.css",
+      "strictImports" : 0,
+      "fileType" : 0
+    },
+    "\/img\/apple-touch-icon-72-precomposed.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 1,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/apple-touch-icon-72-precomposed.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/apple-touch-icon-72-precomposed.png",
+      "initialSize" : 11063,
+      "fileType" : 10
+    },
+    "\/src\/less\/buttons.less" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 1,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/src\/less\/buttons.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/css\/buttons.css",
       "strictImports" : 0,
       "fileType" : 0
     },
@@ -470,18 +537,6 @@
       "strictImports" : 0,
       "fileType" : 0
     },
-    "\/src\/less\/popovers.less" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 1,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/src\/less\/popovers.less",
-      "outputStyle" : 1,
-      "shouldRunBless" : 1,
-      "outputAbbreviatedPath" : "\/css\/popovers.css",
-      "strictImports" : 0,
-      "fileType" : 0
-    },
     "\/src\/less\/navbar.less" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -491,6 +546,18 @@
       "outputStyle" : 1,
       "shouldRunBless" : 1,
       "outputAbbreviatedPath" : "\/css\/navbar.css",
+      "strictImports" : 0,
+      "fileType" : 0
+    },
+    "\/src\/less\/popovers.less" : {
+      "ignoreWasSetByUser" : 1,
+      "ignore" : 1,
+      "hidden" : 1,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/src\/less\/popovers.less",
+      "outputStyle" : 1,
+      "shouldRunBless" : 1,
+      "outputAbbreviatedPath" : "\/css\/popovers.css",
       "strictImports" : 0,
       "fileType" : 0
     },
@@ -505,6 +572,28 @@
       "outputAbbreviatedPath" : "\/css\/scaffolding.css",
       "strictImports" : 0,
       "fileType" : 0
+    },
+    "\/img\/amusement.jpg" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/amusement.jpg",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/amusement.jpg",
+      "initialSize" : 103864,
+      "fileType" : 9
+    },
+    "\/img\/apple-touch-icon-57-precomposed.png" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 1,
+      "hidden" : 1,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/img\/apple-touch-icon-57-precomposed.png",
+      "processed" : 0,
+      "outputAbbreviatedPath" : "\/img\/apple-touch-icon-57-precomposed.png",
+      "initialSize" : 8659,
+      "fileType" : 10
     },
     "\/src\/less\/alerts.less" : {
       "ignoreWasSetByUser" : 1,
@@ -646,6 +735,15 @@
       "outputAbbreviatedPath" : "\/js\/bootstrap-collapse.min.js",
       "fileType" : 5
     },
+    "\/404.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/404.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 8
+    },
     "\/src\/less\/utilities.less" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -690,17 +788,6 @@
       "outputAbbreviatedPath" : "\/js\/bootstrap-button.min.js",
       "fileType" : 5
     },
-    "\/src\/js\/bootstrap-popover.js" : {
-      "ignoreWasSetByUser" : 1,
-      "ignore" : 1,
-      "hidden" : 1,
-      "outputPathIsSetByUser" : 0,
-      "inputAbbreviatedPath" : "\/src\/js\/bootstrap-popover.js",
-      "outputStyle" : 1,
-      "syntaxCheckerStyle" : 0,
-      "outputAbbreviatedPath" : "\/js\/bootstrap-popover.min.js",
-      "fileType" : 5
-    },
     "\/src\/js\/bootstrap-tooltip.js" : {
       "ignoreWasSetByUser" : 1,
       "ignore" : 1,
@@ -711,6 +798,15 @@
       "syntaxCheckerStyle" : 0,
       "outputAbbreviatedPath" : "\/js\/bootstrap-tooltip.min.js",
       "fileType" : 5
+    },
+    "\/blog\/index.html" : {
+      "ignoreWasSetByUser" : 0,
+      "ignore" : 0,
+      "hidden" : 0,
+      "outputPathIsSetByUser" : 0,
+      "inputAbbreviatedPath" : "\/blog\/index.html",
+      "outputAbbreviatedPath" : "No Output Path",
+      "fileType" : 8
     }
   },
   "manualImportLinks" : [
