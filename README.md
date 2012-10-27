@@ -1,4 +1,4 @@
 sathomas.github.com
 ===================
 
-Web page hosted on github.com
+Web site http://sathomas.me hosted on github.com
