@@ -10,10 +10,36 @@
     <!-- Le styles -->
     <link href="css/styles.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Rokkitt:700|Lato:400' rel='stylesheet' type='text/css'>
-    <style>
-    </style>
     <!-- <link href="css/styles-responsive.min.css" rel="stylesheet"> -->
-
+    <style>
+      /*
+       * General styles for responive images thanks to
+       * http://heygrady.com/blog/2012/05/25/responsive-images-without-javascript/
+       */
+      .image {
+        display: -moz-inline-box;
+        -moz-box-orient: vertical;
+        display: inline-block;
+        vertical-align: middle;
+        *vertical-align: auto;
+        font: 0/0 serif;
+        text-shadow: none;
+        color: transparent;
+        -webkit-background-size: 100%;
+        -moz-background-size: 100%;
+        -o-background-size: 100%;
+        background-size: 100%;
+        background-position: 50% 50%;
+        background-repeat: no-repeat;
+      }
+      .image {
+        *display: inline;
+      }
+      .image .inner {
+        display: block;
+        height: 0;
+      }
+    </style>
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -33,8 +59,88 @@
       <div class="row">
       
         <h1>User Experience &&nbsp;Usability <small>The&nbsp;Art&nbsp;and&nbsp;Science&nbsp;of&nbsp;Design</small></h1>
-        <img width="100%" src="img/blueprint.jpg"/>
-        
+        <!-- <img width="100%" src="img/blueprint.jpg"/> -->
+        <div>
+          <span class="image-scope">
+            <style scoped="">
+              /*
+               * Specific responsive image, breakpoint technique thanks to
+               * http://timkadlec.com/2012/04/media-query-asset-downloading-results/
+               */
+
+              /* Baseline and fall-back styles for browsers without media query support (IE6-8) */
+              #blueprint {
+                background-image: url("img/blueprint744.jpg");
+                width: 100%;
+              }
+              #blueprint .inner {
+                padding-top: 41.6667%; /* 310px / 744px * 100% = 41.6667% */
+              }
+              @media only screen and (max-width: 767px) {
+                /* Small screen, non-retina */
+                #blueprint { background-image: url("img/blueprint600.jpg"); }
+              }
+              @media
+              only screen and (-webkit-min-device-pixel-ratio: 2)      and (max-width: 767px),
+              only screen and (   min--moz-device-pixel-ratio: 2)      and (max-width: 767px),
+              only screen and (   -moz-min-device-pixel-ratio: 2)      and (max-width: 767px),
+              only screen and (     -o-min-device-pixel-ratio: 2/1)    and (max-width: 767px),
+              only screen and (        min-device-pixel-ratio: 2)      and (max-width: 767px),
+              only screen and (                min-resolution: 192dpi) and (max-width: 767px),
+              only screen and (                min-resolution: 2dppx)  and (max-width: 767px) {
+                /* Small screen, retina, stuff to override above media query */
+                #blueprint { background-image: url("img/blueprint600@2x.jpg"); }
+              }
+              @media only screen and (min-width: 768px) and (max-width: 979px) {
+                /* Medium screen, non-retina */
+                #blueprint { background-image: url("img/blueprint744.jpg"); }
+              }
+              @media
+              only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 768px) and (max-width: 979px),
+              only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 768px) and (max-width: 979px),
+              only screen and (   -moz-min-device-pixel-ratio: 2)      and (min-width: 768px) and (max-width: 979px),
+              only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 768px) and (max-width: 979px),
+              only screen and (        min-device-pixel-ratio: 2)      and (min-width: 768px) and (max-width: 979px),
+              only screen and (                min-resolution: 192dpi) and (min-width: 768px) and (max-width: 979px),
+              only screen and (                min-resolution: 2dppx)  and (min-width: 768px) and (max-width: 979px) {
+                /* Medium screen, retina, stuff to override above media query */
+                #blueprint { background-image: url("img/blueprint744@2x.jpg"); }
+              }
+              @media only screen and (min-width: 980px) and (max-width: 1199px) {
+                /* Regular screen, non-retina */
+                #blueprint { background-image: url("img/blueprint960.jpg"); }
+              }
+              @media
+              only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 980px) and (max-width: 1199px),
+              only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 980px) and (max-width: 1199px),
+              only screen and (   -moz-min-device-pixel-ratio: 2)      and (min-width: 980px) and (max-width: 1199px),
+              only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 980px) and (max-width: 1199px),
+              only screen and (        min-device-pixel-ratio: 2)      and (min-width: 980px) and (max-width: 1199px),
+              only screen and (                min-resolution: 192dpi) and (min-width: 980px) and (max-width: 1199px),
+              only screen and (                min-resolution: 2dppx)  and (min-width: 980px) and (max-width: 1199px) {
+                /* Regular screen, retina, stuff to override above media query */
+                #blueprint { background-image: url("img/blueprint960@2x.jpg"); }
+              }
+              @media only screen and (min-width: 1200px) {
+                /* Large screen, non-retina */
+                #blueprint { background-image: url("img/blueprint1200.jpg"); }
+              }
+              @media
+              only screen and (-webkit-min-device-pixel-ratio: 2)      and (min-width: 1200px),
+              only screen and (   min--moz-device-pixel-ratio: 2)      and (min-width: 1200px),
+              only screen and (   -moz-min-device-pixel-ratio: 2)      and (min-width: 1200px),
+              only screen and (     -o-min-device-pixel-ratio: 2/1)    and (min-width: 1200px),
+              only screen and (        min-device-pixel-ratio: 2)      and (min-width: 1200px),
+              only screen and (                min-resolution: 192dpi) and (min-width: 1200px),
+              only screen and (                min-resolution: 2dppx)  and (min-width: 1200px) {
+                /* Large screen, retina, stuff to override above media query */
+                #blueprint { background-image: url("img/blueprint1200@2x.jpg"); }
+              }
+          
+            </style>
+            <span id="blueprint" class="image" role="img" aria-label="Blueprints with pencil and ruler."><span class="inner"></span></span>
+          </span>
+        </div>
       </div> <!-- /row -->
       <div class="row">
         <div class="navbar">
