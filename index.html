@@ -39,8 +39,15 @@
         display: block;
         height: 0;
       }
+      
+      /* Bootstrap fixes */
+      /* .visible-iphone converts spans to blocks */
       span.inline.visible-iphone {
         display: inline important!;
+      }
+      /* rows have negative margins */
+      .row {
+        margin-left: 0px;
       }
     </style>
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -69,6 +76,11 @@
               /*
                * Specific responsive image, breakpoint technique thanks to
                * http://timkadlec.com/2012/04/media-query-asset-downloading-results/
+               *
+               * Image widths calculated (incorrectly) with Bootstrap bug should change to
+               *       744px  =>   724px
+               *       960px  =>   940px
+               *      1200px  =>  1170px
                */
 
               /* Baseline and fall-back styles for browsers without media query support (IE6-8) */
