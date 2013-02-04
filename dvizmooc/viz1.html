@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Data Visualization</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="css/styles.min.css" rel="stylesheet">
+    <link href='https://fonts.googleapis.com/css?family=Lato|Rokkitt:700' rel='stylesheet' type='text/css'>
+
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+      <script src="js/excanvas.min.js"></script>
+    <![endif]-->
+
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="img/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="img/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="img/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="img/apple-touch-icon-57-precomposed.png">
+    <link rel="shortcut icon" href="favicon.ico">
+  </head>
+
+  <body>
+    
+    <div class="container">
+      <div class="row">
+        <div class="pull-left">
+          <div id='chart1' style="width:500px;height:380px;"></div>
+        </div>
+        <div class="pull-left" style="padding-left:10px;">
+          <table id="charts2" class="table table-condensed" style="width:500px;margin-top: 36px;border-bottom:1px solid #dddddd">
+            <thead>
+              <tr>
+                <th colspan="3">Faculty Ranks</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+  
+      </div>
+
+    <script src="js/scripts.min.js"></script>
+    <script src="js/jquery.sparkline.min.js"></script>
+    <script src="js/flotr2.min.js"></script>
+
+    <script>
+      $(function() {
+        var tenure = [[0,46.5],[1,46.2],[2,45.1],[3,44.3],[4,44.1]];
+        var track  = [[0,20.8],[1,20.8],[2,20.8],[3,20.4],[4,19.9]];
+        Flotr.draw(document.getElementById("chart1"),[
+                {data: tenure, color: "#735fb9", label: "Tenure"},
+                {data: track,  color: "#97aceb", label: "Tenure Track"},
+            ],{
+                title: "Tenure Status in US Higher Education",
+                subtitle: "Percentage of Faculty (all types)",
+                bars: {
+                    show: true,
+                    stacked: true,
+                    barWidth: 0.5,
+                  shadowSize: 0,
+                  fillOpacity: 1,
+                  lineWidth: 0,
+                },
+                yaxis: {
+                    min: 0,
+                    max: 100,
+                    noTicks: 5,
+                    minorTickFreq: 2,
+                    tickFormatter: function(val) { return val + " % "} ,
+                },
+                xaxis: {
+                    ticks: [[0,"2001"],[1,"2003"],[2,"2005"],[3,"2007"],[4,"2009"]],
+                },
+                grid: {
+                    horizontalLines: true,
+                    minorHorizontalLines: true,
+                    verticalLines: false,
+                    tickColor: "#e0e0e0",
+                }
+            }
+        );
+        var ranks = [
+          {
+            "rank"     :"Professor",
+            "tenured"  :[{"year":2001,"number":141660},{"year":2003,"number":146206},{"year":2005,"number":147693},{"year":2007,"number":150252},{"year":2009,"number":153524}],
+            "track"    :[{"year":2001,"number":4301},{"year":2003,"number":3791},{"year":2005,"number":3621},{"year":2007,"number":3718},{"year":2009,"number":3690}],
+            "nontrack" :[{"year":2001,"number":14844},{"year":2003,"number":16081},{"year":2005,"number":18603},{"year":2007,"number":20375},{"year":2009,"number":21999}]
+          },{
+            "rank"     :"Associate",
+            "tenured"  :[{"year":2001,"number":92827},{"year":2003,"number":95012},{"year":2005,"number":97593},{"year":2007,"number":101956},{"year":2009,"number":106231}],
+            "track"    :[{"year":2001,"number":16259},{"year":2003,"number":16448},{"year":2005,"number":17085},{"year":2007,"number":16470},{"year":2009,"number":16007}],
+            "nontrack" :[{"year":2001,"number":19239},{"year":2003,"number":21207},{"year":2005,"number":24395},{"year":2007,"number":25792},{"year":2009,"number":27614}]
+          },{
+            "rank":"Assistant",
+            "tenured"  :[{"year":2001,"number":14281},{"year":2003,"number":14028},{"year":2005,"number":12973},{"year":2007,"number":12970},{"year":2009,"number":12296}],
+            "track"    :[{"year":2001,"number":83760},{"year":2003,"number":91347},{"year":2005,"number":94857},{"year":2007,"number":97596},{"year":2009,"number":100469}],
+            "nontrack" :[{"year":2001,"number":45708},{"year":2003,"number":47761},{"year":2005,"number":53018},{"year":2007,"number":58110},{"year":2009,"number":60001}]
+          },{
+            "rank"     :"Instructor",
+            "tenured"  :[{"year":2001,"number":19241},{"year":2003,"number":19350},{"year":2005,"number":18400},{"year":2007,"number":18335},{"year":2009,"number":18670}],
+            "track"    :[{"year":2001,"number":15634},{"year":2003,"number":13248},{"year":2005,"number":13028},{"year":2007,"number":13560},{"year":2009,"number":12317}],
+            "nontrack" :[{"year":2001,"number":47649},{"year":2003,"number":50485},{"year":2005,"number":54581},{"year":2007,"number":54956},{"year":2009,"number":56314}]
+          },{
+            "rank":"Lecturer",
+            "tenured"  :[{"year":2001,"number":565},{"year":2003,"number":479},{"year":2005,"number":497},{"year":2007,"number":428},{"year":2009,"number":585}],
+            "track"    :[{"year":2001,"number":504},{"year":2003,"number":536},{"year":2005,"number":479},{"year":2007,"number":582},{"year":2009,"number":605}],
+            "nontrack" :[{"year":2001,"number":17763},{"year":2003,"number":22321},{"year":2005,"number":26092},{"year":2007,"number":30089},{"year":2009,"number":32510}]
+          },{
+            "tenured"  :[{"year":2001,"number":8985},{"year":2003,"number":9949},{"year":2005,"number":9700},{"year":2007,"number":9908},{"year":2009,"number":10357}],
+            "rank"     :"Other",
+            "track"    :[{"year":2001,"number":3727},{"year":2003,"number":2959},{"year":2005,"number":3010},{"year":2007,"number":3057},{"year":2009,"number":3027}],
+            "nontrack" :[{"year":2001,"number":49420},{"year":2003,"number":46351},{"year":2005,"number":40822},{"year":2007,"number":44473},{"year":2009,"number":47241}]
+          }
+        ];
+        $.each(ranks, function(i,rank) {
+          var tenured_percent = [],
+              track_percent   = [],
+              both_percent    = [],
+              totals = [];
+          $.each(rank.tenured, function(j,year) {
+              var total = rank.tenured[j].number + rank.track[j].number + rank.nontrack[j].number;
+              totals.push(total);
+              tenured_percent.push(100*rank.tenured[j].number/total);
+              track_percent.push(100*rank.track[j].number/total);
+              both_percent.push(100*(rank.tenured[j].number+rank.track[j].number)/total);
+          });
+          rank.totals = totals;
+          rank.tenured_percent = tenured_percent;
+          rank.track_percent = track_percent;
+          rank.both_percent = both_percent;
+          var change = ($(rank.tenured_percent).last()[0] + $(rank.track_percent).last()[0])
+                        - (rank.tenured_percent[0] + rank.track_percent[0]);
+          var tr = $("<tr>");
+          $(tr).append($("<td>").css("width","1px").text(rank.rank))
+               .append($("<td>").css("position","relative")
+                   .append($("<div>").addClass("marker").css("position","absolute")
+                                     .css("z-index","1").css("display","none")
+                                     .css("width","1px").css("height","48px")
+                                     .css("top", "0px").css("border-left","1px solid #ffa44f"))
+                   .append($("<span>").attr("id","rank-"+i))
+                   .append($("<span>").attr("id","tip-"+i).css("display","inline-block")
+                                      .css("position","absolute")
+                                      .css("line-height","1.3em")
+                                      .css("font-size","0.75em").css("padding-left","3px")))
+               .append($("<td>").css("width","1px").css("white-space","nowrap").text((change >= 0 ? "+" : "")+change.toFixed(2)+" % change from 2001 to 2009"));
+          $("#charts2 tbody").append(tr);
+          $("#charts2 #rank-"+i)
+              .sparkline(rank.both_percent, {
+                  width: "85px",
+                  height: "40px",
+                  lineColor: "#735fb9",
+                  fillColor: "#97aceb",
+                  spotColor: "#ffa44f",
+                  minSpotColor: "#ffa44f",
+                  maxSpotColor: "#ffa44f",
+                  disableHighlight: true,
+                  disableTooltips: true,
+                  spotRadius: 2,
+              })
+              .sparkline(rank.tenured_percent, {
+                  composite: true,
+                  chartRangeMin: Math.min.apply(null, rank.both_percent),
+                   chartRangeMax: Math.max.apply(null, rank.both_percent),
+                  lineColor: "#735fb9",
+                  fillColor: "#735fb9",
+                  spotColor: false,
+                  minSpotColor: false,
+                  maxSpotColor: false,
+                  disableHighlight: true,
+                  disableTooltips: true,
+              })
+              .on('sparklineRegionChange', function(ev) {
+                  var idx = ev.sparklines[0].getCurrentRegionFields().offset;
+                  if (typeof idx != 'undefined') {
+                      $.each(ranks, function(k,rank) {
+                          $("#charts2 #tip-"+k)
+                              .html(2001+idx*2+" Total: "+rank.both_percent[idx].toFixed(2)+"%<br/>"
+                                   +"Tenure Track: "+rank.track_percent[idx].toFixed(2)+"%<br/>"
+                                   +"Tenure: "+rank.tenured_percent[idx].toFixed(2)+"%")
+                              .show();
+                      });
+                  }
+              })
+              .on('mousemove', function(ev) {
+                  $("#charts2 .marker").css("left", ev.offsetX + "px").show();
+              })
+              .on('mouseout', function(ev) {
+                  $("#charts2 .marker").hide();
+                  $.each(ranks, function(k,rank) {
+                      $("#charts2 #tip-"+k).html("");
+                  });
+              });
+        });
+      });
+    </script>
+
+  </body>
+</html>
