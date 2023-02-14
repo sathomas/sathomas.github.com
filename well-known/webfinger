@@ -1,0 +1,23 @@
+{
+    "subject": "acct:sathomas@vmst.io",
+    "aliases": [
+        "https://vmst.io/@sathomas",
+        "https://vmst.io/users/sathomas"
+    ],
+    "links": [
+        {
+            "rel": "http://webfinger.net/rel/profile-page",
+            "type": "text/html",
+            "href": "https://vmst.io/@sathomas"
+        },
+        {
+            "rel": "self",
+            "type": "application/activity+json",
+            "href": "https://vmst.io/users/sathomas"
+        },
+        {
+            "rel": "http://ostatus.org/schema/1.0/subscribe",
+            "template": "https://vmst.io/authorize_interaction?uri={uri}"
+        }
+    ]
+}
